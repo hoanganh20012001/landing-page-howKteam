@@ -1,11 +1,20 @@
+@mixin set-layout {
+    padding: 0 14rem;
+} 
+
 .section-about {
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -25rem;
+
+    &__content {
+        @include set-layout;
+    }
+
 }
 
 .section-skills {
-    padding: 20rem 6rem;
+    padding: 20rem 14rem;
     background-image: linear-gradient(to right bottom,
     rgba($color-primary-light, .8),
     rgba($color-primary-dark, .8)),
@@ -22,7 +31,8 @@
     margin-top: -20rem;
 
     .set-layout {
-        padding: 10rem;
+        @include set-layout;
+        margin-bottom: 10rem;
     }
 }
 
@@ -31,7 +41,7 @@
     padding: 5rem 0;
 
     .set-layout {
-        padding: 0 8rem;
+        @include set-layout;
         margin-bottom: 8rem;
     }
 }
@@ -41,7 +51,7 @@
     padding: 10rem 0;
 
     .set-layout {
-        padding: 0 10rem;
+        @include set-layout;
     }
 }
 
